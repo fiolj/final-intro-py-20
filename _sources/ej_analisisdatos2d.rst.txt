@@ -1,0 +1,97 @@
+Análisis de datos
+=================
+
+En el archivo `medicion3D.dat.gz <data/medicion3D.dat.gz>`_ se encuentra el resultado de muchos
+días de medición de datos que corresponden a puntos en el espacio
+tridimensional. Los datos están organizados en tres columnas
+correspondientes a los valores de las coordenadas en :math:`x`,
+:math:`y`, :math:`z`.
+
+.. note:: 
+  
+  Los archivos `medicion3D_0.dat.gz <data/medicion3D_0.dat.gz>`_, `medicion3D_1.dat.gz <data/medicion3D_1.dat.gz>`_  son archivos equivalentes a *medicion3D.dat.gz* con un número menor de datos. Utilice estos archivos sólo si tiene problemas para procesar el archivo *medcion3D.dat.gz* debido al gran número de datos.
+
+  
+  
+
+Se pide que realice un programa que:
+
+1. Lea los datos del archivo.
+2. Realice un gráfico que ilustre la cantidad de puntos en los puntos
+   del plano :math:`x-y`, independientemente del valor :math:`z`
+   (proyección sobre el plano :math:`x-y`). Mostrar también, las
+   distribuciones a lo largo de los ejes :math:`x` e :math:`y`. La
+   siguiente figura da un ejemplo de dicho gráfico
+
+.. hint:: 
+  
+  Puede resultar útil el método del objeto ``Figure``:
+  ``Figure.add_gridspec()``.
+  
+  
+.. image:: ../figuras/ej_analisisdatos2d_f1.png
+
+
+3. Realice cortes de los datos para valores de
+   :math:`z_{0}=-4.5, -3.5, \dots, 4.5` en todos los casos con un ancho
+   :math:`\Delta z = \pm 0.5`. Por ejemplo, para :math:`z = 1.5`
+   corresponde a todos los puntos que cumplen la condición
+   :math:`1 \le z \le 2`.
+
+   Para cada corte se pide que:
+
+   a. Identifique el centro :math:`(x_{0},y_{0})` de la distribución en
+      el plano :math:`x-y`.
+   b. Calcule el eje principal de la distribución, que definimos como la
+      recta a la cuál la suma de las distancias de todos los puntos es
+      mínima.
+   c. Obtenga el valor del ángulo :math:`\theta` del eje respecto al eje
+      horizontal.
+   d. Transforme la distribución de manera que quede centrada en el
+      origen y el eje principal se alinee con el eje horizontal.
+
+   En el mismo estilo de la figura anterior, un gráfico posible sería:
+
+.. image:: ../figuras/ej_analisisdatos2d_f2.png
+
+
+4. Haga gráficos del centro de la distribución :math:`(x_{0},y_{0})` y
+   del ángulo del eje :math:`\theta` con el valor del centro del corte
+   :math:`z_{0}`.
+
+5. Combine los gráficos anteriores en una única figura con tres paneles:
+
+   -  A la izquierda arriba graficará el ángulo del eje como función de
+      :math:`z_{0}`.
+   -  A la izquierda abajo las coordenadas :math:`x` e :math:`y` como
+      función de :math:`z_{0}`.
+   -  A la derecha un gráfico de intensidades en el plano :math:`x-y`.
+
+6. Agregue interactividad al gráfico del punto anterior de manera tal
+   que al seleccionar con el cursor del *mouse* un punto en cualquiera de las
+   curvas de la izquierda seleccione el punto :math:`z_0`, lo marque con
+   un color diferente, y actualice el gráfico de la derecha con el
+   gráfico de intensidades correspondiente al valor de :math:`z_0`.
+
+   Un ejemplo, donde se seleccionó el punto :math:`z_0 = 0.5` se muestra
+   en la siguiente figura:
+
+.. image:: ../figuras/ej_analisisdatos2d_f3.png
+
+
+.. warning:: 
+  
+  Los gráficos que se muestran no reflejan los valores reales que se
+  obtienen de los datos.
+  
+  
+
+.. note:: 
+  
+  No se pide que se reproduzcan los gráficos en forma exacta, sino que se
+  muestren los datos de la manera que considere que es más clara.
+  
+  
+
+
+

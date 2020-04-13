@@ -1,0 +1,122 @@
+Scrabble
+========
+
+En este ejercicio, se pide crear un programa que resuelva el problema de
+Scrabble en un dado idioma (sólo tenemos listas de palabras en español e
+inglés)
+
+Los valores de las fichas y sus ocurrencias están en el archivo
+`fichas_scrabble.py <data/fichas_scrabble.py>`_ como diccionarios con nombre fichas_id donde id
+son dos letras correspondientes al idioma. En este diccionario los
+elementos son del tipo: ``fichas_id['a']=(repeticion, valor)`` donde
+``repeticion`` se refiere a la cantidad de fichas con esta letra, y
+``valor`` al número de puntos que tiene.
+
+.. figure:: ../figuras/fichas_scrabble_es.png
+   :align: center
+
+   (Mario R Eraso, GFDL, https://commons.wikimedia.org/w/index.php?curid=5670302)
+
+.. important:: En los archivos `palabras.words.gz <data/palabras.words.gz>`_ y `palabras.words_en.gz <data/palabras.words_en.gz>`_ hay listas de palabras en castellano e inglés, respectivamente.
+
+
+Se pide que:
+
+1. Realice un esquema similar al de la figura usando **Matplotlib**
+
+2. Escriba un programa que realice diferentes acciones dependiendo de los argumentos que se le pasen.
+   Suponiendo que el programa se llama resuelve_scrabble.py un ejemplo de su invocación puede ser (python corresponde a python3):
+
+.. code:: bash
+
+   $ python resuelve_scrabble.py "a,e,b,t,i,s,r"
+   ...
+
+   $ python resuelve_scrabble.py "A,E,B,T,I,S,R"
+   ...
+
+   $ python resuelve_scrabble.py "a,E,B,t,i,S,r"
+   ...
+
+En todos los casos el resultado debe ser el mismo y debe devolver la lista de palabras posibles en castellano, ordenadas de mayor a menor puntaje.
+
+Realice los siguientes pasos:
+
+1. Lea la lista de palabras correspondiente al idioma y guárdelas en
+   alguna estructura adecuada.
+
+2. Encuentre todas las palabras de la lista que puedan formarse con el
+   string dado. Tenga en cuenta que las letras pueden repetirse.
+
+3. Utilice el módulo ``argparse`` para hacer que su programa acepte
+   argumentos. Debe tener al menos los siguientes comportamientos:
+
+.. code:: bash
+
+       $ python resuelve_scrabble.py
+       Usage: resuelve_scrabble.py [-h] [-l] [-o salida] -n | SECUENCIA
+       ... (texto explicativo de como usar el programa)
+
+
+       $ python resuelve_scrabble.py -h
+       Usage: resuelve_scrabble.py [-h] [-l] [-o salida] -n | SECUENCIA
+       ... (texto explicativo de como usar el programa)
+
+       $ python resuelve_scrabble.py ABCDEF7
+       Error: debe ingresar letras únicamente
+       ... (texto explicativo de como usar el programa)
+       $ python resuelve_scrabble.py LEEEEEE
+       lee : 3 puntos
+       el : 2 puntos
+       le : 2 puntos
+
+       $ python resuelve_scrabble.py -l en AAAAAAA
+       aa : 2 puntos
+
+       $ python resuelve_scrabble.py -n 3
+       AFZUBEA : X puntos
+       OFLREAB : X puntos
+       IDCAEOP : X puntos
+
+.. note::
+
+   -  En los tres primeros casos debe dar un mensaje informativo, y si
+      corresponde información sobre algún error de uso.
+   
+   -  El argumento ``-l`` o ``--language=`` se usa para elegir el idioma. Los
+      valores posibles son 'en' o 'es', que es el valor por default.
+   
+   -  El argumento ``-n`` indica que las letras deben elegirse al azar ``n``
+      veces y en ese caso sólo se indicará la palabra (o palabras)
+      correspondiente al puntaje máximo, y su puntaje. Tener en cuenta aquí
+      que la probabilidad de sacar una letra depende de cuántas hay de ese
+      tipo. También hay que tener en cuenta que una vez que se saca una
+      letra, ya no está disponible.
+   
+   -  El argumento ``-o`` permite sacar los resultados a un archivo en lugar
+      de escribirlos por pantalla.
+   
+   -  Las fichas marcadas como “blank” son comodines, y pueden reemplazar
+      cualquier letra.
+
+Extra
+-----
+
+Agregue una opción `-s` o `--estadistica` que en forma similar a la
+opción `-n` calcule automáticamente las letras que se sacan. En lugar de
+imrpimir la palabra correspondiente al valor máximo creará un
+histograma. Por ejemplo, podemos pedir que haga un gráfico con el
+histograma y guarde el gráfico correspondiente en formato *png* en el
+archivo *salida.png* usando:
+
+.. code:: bash
+
+      $ python resuelve_scrabble.py -s 1000 -o salida.png
+
+Si queremos una tabla de datos con el histograma usaríamos:
+
+.. code:: bash
+
+      $ python resuelve_scrabble.py -s 1000 -o salida.dat
+
+

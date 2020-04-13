@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Scrabble &mdash; documentación de Examen Final IPyCI - 13/04/2020</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/rtd_overrides.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Análisis de datos" href="ej_analisisdatos2d.html" />
+    <link rel="prev" title="Examen Final IPyIC 2020" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Examen Final IPyCI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Problemas:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scrabble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#extra">Extra</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ej_analisisdatos2d.html">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ej_criptografia.html">Análisis criptográfico de texto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ej_decaimiento.html">Decaímiento espontáneo de estados metaestables</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Examen Final IPyCI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Scrabble</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/ej_scrabble.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scrabble">
+<h1>Scrabble<a class="headerlink" href="#scrabble" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>En este ejercicio, se pide crear un programa que resuelva el problema de
+Scrabble en un dado idioma (sólo tenemos listas de palabras en español e
+inglés)</p>
+<p>Los valores de las fichas y sus ocurrencias están en el archivo
+<a class="reference external" href="data/fichas_scrabble.py">fichas_scrabble.py</a> como diccionarios con nombre fichas_id donde id
+son dos letras correspondientes al idioma. En este diccionario los
+elementos son del tipo: <code class="docutils literal notranslate"><span class="pre">fichas_id['a']=(repeticion,</span> <span class="pre">valor)</span></code> donde
+<code class="docutils literal notranslate"><span class="pre">repeticion</span></code> se refiere a la cantidad de fichas con esta letra, y
+<code class="docutils literal notranslate"><span class="pre">valor</span></code> al número de puntos que tiene.</p>
+<div class="figure align-center" id="id1">
+<img alt="_images/fichas_scrabble_es.png" src="_images/fichas_scrabble_es.png" />
+<p class="caption"><span class="caption-text">(Mario R Eraso, GFDL, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=5670302">https://commons.wikimedia.org/w/index.php?curid=5670302</a>)</span><a class="headerlink" href="#id1" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>En los archivos <a class="reference external" href="data/palabras.words.gz">palabras.words.gz</a> y <a class="reference external" href="data/palabras.words_en.gz">palabras.words_en.gz</a> hay listas de palabras en castellano e inglés, respectivamente.</p>
+</div>
+<p>Se pide que:</p>
+<ol class="arabic simple">
+<li><p>Realice un esquema similar al de la figura usando <strong>Matplotlib</strong></p></li>
+<li><p>Escriba un programa que realice diferentes acciones dependiendo de los argumentos que se le pasen.
+Suponiendo que el programa se llama resuelve_scrabble.py un ejemplo de su invocación puede ser (python corresponde a python3):</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python resuelve_scrabble.py <span class="s2">&quot;a,e,b,t,i,s,r&quot;</span>
+...
+
+$ python resuelve_scrabble.py <span class="s2">&quot;A,E,B,T,I,S,R&quot;</span>
+...
+
+$ python resuelve_scrabble.py <span class="s2">&quot;a,E,B,t,i,S,r&quot;</span>
+...
+</pre></div>
+</div>
+<p>En todos los casos el resultado debe ser el mismo y debe devolver la lista de palabras posibles en castellano, ordenadas de mayor a menor puntaje.</p>
+<p>Realice los siguientes pasos:</p>
+<ol class="arabic simple">
+<li><p>Lea la lista de palabras correspondiente al idioma y guárdelas en
+alguna estructura adecuada.</p></li>
+<li><p>Encuentre todas las palabras de la lista que puedan formarse con el
+string dado. Tenga en cuenta que las letras pueden repetirse.</p></li>
+<li><p>Utilice el módulo <code class="docutils literal notranslate"><span class="pre">argparse</span></code> para hacer que su programa acepte
+argumentos. Debe tener al menos los siguientes comportamientos:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python resuelve_scrabble.py
+Usage: resuelve_scrabble.py <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-l<span class="o">]</span> <span class="o">[</span>-o salida<span class="o">]</span> -n <span class="p">|</span> SECUENCIA
+... <span class="o">(</span>texto explicativo de como usar el programa<span class="o">)</span>
+
+
+$ python resuelve_scrabble.py -h
+Usage: resuelve_scrabble.py <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-l<span class="o">]</span> <span class="o">[</span>-o salida<span class="o">]</span> -n <span class="p">|</span> SECUENCIA
+... <span class="o">(</span>texto explicativo de como usar el programa<span class="o">)</span>
+
+$ python resuelve_scrabble.py ABCDEF7
+Error: debe ingresar letras únicamente
+... <span class="o">(</span>texto explicativo de como usar el programa<span class="o">)</span>
+$ python resuelve_scrabble.py LEEEEEE
+lee : <span class="m">3</span> puntos
+el : <span class="m">2</span> puntos
+le : <span class="m">2</span> puntos
+
+$ python resuelve_scrabble.py -l en AAAAAAA
+aa : <span class="m">2</span> puntos
+
+$ python resuelve_scrabble.py -n <span class="m">3</span>
+AFZUBEA : X puntos
+OFLREAB : X puntos
+IDCAEOP : X puntos
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>En los tres primeros casos debe dar un mensaje informativo, y si
+corresponde información sobre algún error de uso.</p></li>
+<li><p>El argumento <code class="docutils literal notranslate"><span class="pre">-l</span></code> o <code class="docutils literal notranslate"><span class="pre">--language=</span></code> se usa para elegir el idioma. Los
+valores posibles son “en” o “es”, que es el valor por default.</p></li>
+<li><p>El argumento <code class="docutils literal notranslate"><span class="pre">-n</span></code> indica que las letras deben elegirse al azar <code class="docutils literal notranslate"><span class="pre">n</span></code>
+veces y en ese caso sólo se indicará la palabra (o palabras)
+correspondiente al puntaje máximo, y su puntaje. Tener en cuenta aquí
+que la probabilidad de sacar una letra depende de cuántas hay de ese
+tipo. También hay que tener en cuenta que una vez que se saca una
+letra, ya no está disponible.</p></li>
+<li><p>El argumento <code class="docutils literal notranslate"><span class="pre">-o</span></code> permite sacar los resultados a un archivo en lugar
+de escribirlos por pantalla.</p></li>
+<li><p>Las fichas marcadas como “blank” son comodines, y pueden reemplazar
+cualquier letra.</p></li>
+</ul>
+</div>
+<div class="section" id="extra">
+<h2>Extra<a class="headerlink" href="#extra" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Agregue una opción <cite>-s</cite> o <cite>–estadistica</cite> que en forma similar a la
+opción <cite>-n</cite> calcule automáticamente las letras que se sacan. En lugar de
+imrpimir la palabra correspondiente al valor máximo creará un
+histograma. Por ejemplo, podemos pedir que haga un gráfico con el
+histograma y guarde el gráfico correspondiente en formato <em>png</em> en el
+archivo <em>salida.png</em> usando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python resuelve_scrabble.py -s <span class="m">1000</span> -o salida.png
+</pre></div>
+</div>
+<p>Si queremos una tabla de datos con el histograma usaríamos:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python resuelve_scrabble.py -s <span class="m">1000</span> -o salida.dat
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ej_analisisdatos2d.html" class="btn btn-neutral float-right" title="Análisis de datos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Examen Final IPyIC 2020" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Cátedra IB
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

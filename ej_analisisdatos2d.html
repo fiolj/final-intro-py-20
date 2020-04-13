@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Análisis de datos &mdash; documentación de Examen Final IPyCI - 13/04/2020</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/rtd_overrides.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Análisis criptográfico de texto" href="ej_criptografia.html" />
+    <link rel="prev" title="Scrabble" href="ej_scrabble.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Examen Final IPyCI
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Problemas:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ej_scrabble.html">Scrabble</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Análisis de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ej_criptografia.html">Análisis criptográfico de texto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ej_decaimiento.html">Decaímiento espontáneo de estados metaestables</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Examen Final IPyCI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Análisis de datos</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/ej_analisisdatos2d.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analisis-de-datos">
+<h1>Análisis de datos<a class="headerlink" href="#analisis-de-datos" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>En el archivo <a class="reference external" href="data/medicion3D.dat.gz">medicion3D.dat.gz</a> se encuentra el resultado de muchos
+días de medición de datos que corresponden a puntos en el espacio
+tridimensional. Los datos están organizados en tres columnas
+correspondientes a los valores de las coordenadas en <span class="math notranslate nohighlight">\(x\)</span>,
+<span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Los archivos <a class="reference external" href="data/medicion3D_0.dat.gz">medicion3D_0.dat.gz</a>, <a class="reference external" href="data/medicion3D_1.dat.gz">medicion3D_1.dat.gz</a>  son archivos equivalentes a <em>medicion3D.dat.gz</em> con un número menor de datos. Utilice estos archivos sólo si tiene problemas para procesar el archivo <em>medcion3D.dat.gz</em> debido al gran número de datos.</p>
+</div>
+<p>Se pide que realice un programa que:</p>
+<ol class="arabic simple">
+<li><p>Lea los datos del archivo.</p></li>
+<li><p>Realice un gráfico que ilustre la cantidad de puntos en los puntos
+del plano <span class="math notranslate nohighlight">\(x-y\)</span>, independientemente del valor <span class="math notranslate nohighlight">\(z\)</span>
+(proyección sobre el plano <span class="math notranslate nohighlight">\(x-y\)</span>). Mostrar también, las
+distribuciones a lo largo de los ejes <span class="math notranslate nohighlight">\(x\)</span> e <span class="math notranslate nohighlight">\(y\)</span>. La
+siguiente figura da un ejemplo de dicho gráfico</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Consejo</p>
+<p>Puede resultar útil el método del objeto <code class="docutils literal notranslate"><span class="pre">Figure</span></code>:
+<code class="docutils literal notranslate"><span class="pre">Figure.add_gridspec()</span></code>.</p>
+</div>
+<img alt="_images/ej_analisisdatos2d_f1.png" src="_images/ej_analisisdatos2d_f1.png" />
+<ol class="arabic" start="3">
+<li><p>Realice cortes de los datos para valores de
+<span class="math notranslate nohighlight">\(z_{0}=-4.5, -3.5, \dots, 4.5\)</span> en todos los casos con un ancho
+<span class="math notranslate nohighlight">\(\Delta z = \pm 0.5\)</span>. Por ejemplo, para <span class="math notranslate nohighlight">\(z = 1.5\)</span>
+corresponde a todos los puntos que cumplen la condición
+<span class="math notranslate nohighlight">\(1 \le z \le 2\)</span>.</p>
+<p>Para cada corte se pide que:</p>
+<ol class="loweralpha simple">
+<li><p>Identifique el centro <span class="math notranslate nohighlight">\((x_{0},y_{0})\)</span> de la distribución en
+el plano <span class="math notranslate nohighlight">\(x-y\)</span>.</p></li>
+<li><p>Calcule el eje principal de la distribución, que definimos como la
+recta a la cuál la suma de las distancias de todos los puntos es
+mínima.</p></li>
+<li><p>Obtenga el valor del ángulo <span class="math notranslate nohighlight">\(\theta\)</span> del eje respecto al eje
+horizontal.</p></li>
+<li><p>Transforme la distribución de manera que quede centrada en el
+origen y el eje principal se alinee con el eje horizontal.</p></li>
+</ol>
+<p>En el mismo estilo de la figura anterior, un gráfico posible sería:</p>
+</li>
+</ol>
+<img alt="_images/ej_analisisdatos2d_f2.png" src="_images/ej_analisisdatos2d_f2.png" />
+<ol class="arabic" start="4">
+<li><p>Haga gráficos del centro de la distribución <span class="math notranslate nohighlight">\((x_{0},y_{0})\)</span> y
+del ángulo del eje <span class="math notranslate nohighlight">\(\theta\)</span> con el valor del centro del corte
+<span class="math notranslate nohighlight">\(z_{0}\)</span>.</p></li>
+<li><p>Combine los gráficos anteriores en una única figura con tres paneles:</p>
+<ul class="simple">
+<li><p>A la izquierda arriba graficará el ángulo del eje como función de
+<span class="math notranslate nohighlight">\(z_{0}\)</span>.</p></li>
+<li><p>A la izquierda abajo las coordenadas <span class="math notranslate nohighlight">\(x\)</span> e <span class="math notranslate nohighlight">\(y\)</span> como
+función de <span class="math notranslate nohighlight">\(z_{0}\)</span>.</p></li>
+<li><p>A la derecha un gráfico de intensidades en el plano <span class="math notranslate nohighlight">\(x-y\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Agregue interactividad al gráfico del punto anterior de manera tal
+que al seleccionar con el cursor del <em>mouse</em> un punto en cualquiera de las
+curvas de la izquierda seleccione el punto <span class="math notranslate nohighlight">\(z_0\)</span>, lo marque con
+un color diferente, y actualice el gráfico de la derecha con el
+gráfico de intensidades correspondiente al valor de <span class="math notranslate nohighlight">\(z_0\)</span>.</p>
+<p>Un ejemplo, donde se seleccionó el punto <span class="math notranslate nohighlight">\(z_0 = 0.5\)</span> se muestra
+en la siguiente figura:</p>
+</li>
+</ol>
+<img alt="_images/ej_analisisdatos2d_f3.png" src="_images/ej_analisisdatos2d_f3.png" />
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Los gráficos que se muestran no reflejan los valores reales que se
+obtienen de los datos.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>No se pide que se reproduzcan los gráficos en forma exacta, sino que se
+muestren los datos de la manera que considere que es más clara.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ej_criptografia.html" class="btn btn-neutral float-right" title="Análisis criptográfico de texto" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ej_scrabble.html" class="btn btn-neutral float-left" title="Scrabble" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Cátedra IB
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
