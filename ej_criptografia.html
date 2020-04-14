@@ -265,12 +265,12 @@ valor obtenido. Por otro lado, para que cada caracter se cifre a un
 caracter diferente, es necesario que el entero utilizado como clave ‘a’
 sea coprimo con 27, es decir, que su único común divisor sea 1.</p>
 <ol class="arabic simple">
-<li><p>Realice el programa descifrar.py que acepte como argumento el nombre
+<li><p>Realice el programa <code class="docutils literal notranslate"><span class="pre">descifrar.py</span></code> que acepte como argumento el nombre
 del archivo con el mensaje cifrado y el valor de las claves ‘a’ y ‘b’
 e imprima en pantalla el mensaje descifrado.</p></li>
 </ol>
 <p>Nuestros espías han descubierto las claves utilizadas para cifrar el
-mensaje del archivo mensaje_cifrado_00.txt. Puede utilizar este mensaje
+mensaje del archivo <code class="docutils literal notranslate"><span class="pre">mensaje_cifrado_00.txt</span></code>. Puede utilizar este mensaje
 para comprobar su algoritmo. Las claves descubiertas son</p>
 <p>a = 7, b = 25</p>
 <p>Ejemplo de implementación (python corresponde a python3):</p>
@@ -285,7 +285,7 @@ observación: como cada caracter se transforma siempre al mismo caracter
 cifrado, puede comparar su frecuencia de ocurrencia con las de un texto
 ordinario para hallar una correspondencia.</p>
 <ol class="arabic simple" start="2">
-<li><p>Realice el programa contar_letras.py que calcule la frecuencia de
+<li><p>Realice el programa <code class="docutils literal notranslate"><span class="pre">contar_letras.py</span></code> que calcule la frecuencia de
 aparición de cada caracter en el texto de un archivo que se le pase
 como argumento y guarde la distribución calculada en un archivo
 binario de numpy (.npy). Para ello quite del texto los signos
@@ -300,7 +300,7 @@ guardarla como archivo):</p></li>
 <p>Utilice este programa para generar la distribución de frecuencia de
 aparición de letras en el idioma español utilizando el primer capítulo
 de la novela “Don Quijote de la Mancha”, el cual puede encontrar en el
-archivo quijote_es.txt.</p>
+archivo <code class="docutils literal notranslate"><span class="pre">quijote_es.txt</span></code>.</p>
 <p>Ejemplo de implementación (python corresponde a python3):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python contar_letras.py quijote_es.txt
 ...
@@ -311,15 +311,15 @@ $ python contar_letras.py quijote_es.txt -o español.npy
 </div>
 <p>Puede utilizar el módulo argparse para manejar los argumentos de
 entrada.</p>
-<p>Nos ha llegado la información de que los textos cifrados pueden estar en
-otros idiomas además del español. Para ello, nuestros agentes le han
-conseguido traducciones de este capítulo en varios idiomas diferentes.
-Genere la distribución de frecuencia de aparición de letras para el
-idioma inglés, alemán, francés, italiano y finlandés utilizando el texto
-en los archivos quijote_en.txt, quijote_de.txt, quijote_fr.txt,
-quijote_it.txt y quijote_fi.txt, respectivamente. Tenga en cuenta que
-estos idiomas pueden poseer signos diacríticos diferentes a los del
-español. Genere un archivo .npy diferente para cada idioma.</p>
+<p>Nos ha llegado la información de que los textos cifrados pueden estar
+en otros idiomas además del español. Para ello, nuestros agentes le
+han conseguido traducciones de este capítulo en varios idiomas
+diferentes.  Genere la distribución de frecuencia de aparición de
+letras para el idioma inglés, alemán y finlandés utilizando el texto
+en los archivos <code class="docutils literal notranslate"><span class="pre">quijote_en.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">quijote_de.txt</span></code> y <code class="docutils literal notranslate"><span class="pre">quijote_fi.txt</span></code>,
+respectivamente. Tenga en cuenta que estos idiomas pueden poseer
+signos diacríticos diferentes a los del español. Genere un archivo
+<code class="docutils literal notranslate"><span class="pre">*.npy</span></code> diferente para cada idioma.</p>
 <hr class="docutils" />
 <p>Para descifrar los mensajes cifrados, puede hacer una correspondencia
 entre los caracteres más frecuentes del texto cifrado con los más
@@ -347,7 +347,7 @@ la recta identidad en el siguiente gráfico:</p>
 <p><img alt="image2" src="_images/cripto_f3.png" /></p>
 <p>Se le pide entonces que:</p>
 <ol class="arabic simple" start="3">
-<li><p>Se le pide entonces que realice el programa criptoanalisis.py que
+<li><p>Se le pide entonces que realice el programa <code class="docutils literal notranslate"><span class="pre">criptoanalisis.py</span></code> que
 descifre el mensaje utilizando las distribuciones ya generadas de
 frecuencia de aparición de letras en los diferentes idiomas. El
 programa deberá:</p>
@@ -376,8 +376,8 @@ idioma detectado, similar al mostrado en la Figura 3.</p></li>
 </ul>
 </li>
 </ol>
-<p>Utilice este programa para descifrar los mensajes mensaje_cifrado_01.txt
-a mensaje_cifrado_09.txt.</p>
+<p>Utilice este programa para descifrar los mensajes <code class="docutils literal notranslate"><span class="pre">mensaje_cifrado_01.txt</span></code>
+a <code class="docutils literal notranslate"><span class="pre">mensaje_cifrado_09.txt</span></code>.</p>
 <p>Ejemplo de implementación (python corresponde a python3):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python criptoanalisis.py mensaje_cifrado_01.txt --idiomas español inglés alemán francés italiano finlandés
 ...
@@ -390,7 +390,7 @@ $ python3 criptoanalisis.py mensaje_cifrado_01.txt -i español
 <div class="section" id="extra-1">
 <h2>Extra 1<a class="headerlink" href="#extra-1" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El centro de inteligencia quiere ser capaz de cifrar sus propios
-mensajes. Se le pide para ello que realice el programa cifrar.py que
+mensajes. Se le pide para ello que realice el programa <code class="docutils literal notranslate"><span class="pre">cifrar.py</span></code> que
 tome un texto normal cualquiera y lo cifre utilizando claves ‘a’ y ‘b’
 pasadas como argumento. El mensaje devuelto tiene que ser descifrable
 mediante el programa del punto 1 utilizando las mismas claves ‘a’ y ‘b’.
@@ -411,7 +411,7 @@ $ python cifrar.py mensaje.txt <span class="m">1</span> <span class="m">3</span>
 <p>Nuestros espías han interceptado un mensaje muy peculiar que, aunque se
 sabe que está en español, no puede ser descifrado utilizando la técnica
 anteriormente expuesta debido a alguna peculiaridad del mensaje. El
-mismo se encuentra en el archivo mensaje_cifrado_10.txt. Es capaz de
+mismo se encuentra en el archivo <code class="docutils literal notranslate"><span class="pre">mensaje_cifrado_10.txt</span></code>. Es capaz de
 descifrarlo?</p>
 <div class="admonition important">
 <p class="admonition-title">Importante</p>
