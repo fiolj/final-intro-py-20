@@ -65,8 +65,8 @@ Realice los siguientes pasos:
        $ python resuelve_scrabble.py ABCDEF7
        Error: debe ingresar letras únicamente
        ... (texto explicativo de como usar el programa)
-       $ python resuelve_scrabble.py LEEEEEE
-       lee : 3 puntos
+       $ python resuelve_scrabble.py LREEEEE
+       leer : 4 puntos
        el : 2 puntos
        le : 2 puntos
 

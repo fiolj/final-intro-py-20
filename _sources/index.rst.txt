@@ -12,7 +12,7 @@ Modalidad
 #########
 
 La modalidad del examen es '*domiciliario*'.
-Cada estudiante debe elegir un problema, resolverlo y enviar su resolución por correo electrónico. La entrega consiste únicamente de uno o más archivos de programa, que por razones 'administrativas' llamaremos *apellido_f.py*. Si se envía más de un archivo, por favor nombrar cada archivo siguiente como *apellido_f1.py*, *apellido_f2.py*.
+Cada estudiante debe elegir un problema, resolverlo y enviar su resolución por correo electrónico. La entrega consiste únicamente de uno o más archivos de programa, sin datos o figuras.
 
 
 ******
