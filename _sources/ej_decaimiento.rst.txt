@@ -67,7 +67,7 @@ Ahora modificamos levemente la física del problema. Considere que cuando cada p
 
 .. hint:: Recuerde que el paquete *Scipy* tiene un módulo con definiciones de unidades y constantes matemáticas y físicas
 
-4. Simular el número de electrones detectados por unidad de tiempo en estas condiciones. La probabilidad por unidad de tiempo es $P=3.2 \times 10^{5}$. Considere sólo un valor de $N_0$ (tome $N_0 = 10^5$ o $10^6$). Grafique el número de electrones detectados y emitidos como función del tiempo, como se muestra en la figura:
+4. Simular el número de electrones detectados por unidad de tiempo en estas condiciones. La probabilidad por unidad de tiempo es $P=3.2 \times 10^{6}$. Considere sólo un valor de $N_0$ (tome $N_0 = 10^5$ o $10^6$). Grafique el número de electrones detectados y emitidos como función del tiempo, como se muestra en la figura:
 
   .. figure:: ../figuras/ej_decaim_fig2.png
      :width: 50%
