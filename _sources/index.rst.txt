@@ -5,6 +5,11 @@
 Examen Final IPyIC 2020
 #######################
 
+:Institución: Instituto Balseiro - Univ. Nac. de Cuyo
+:Fecha: Febrero a abril de |today|
+:Docentes: Juan Fiol y Pablo Maceira
+
+
 El examen final consiste en la resolución de **uno solo** de los cuatro problemas presentados, a elección.
 
 
