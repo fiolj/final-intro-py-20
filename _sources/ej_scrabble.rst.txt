@@ -17,7 +17,7 @@ elementos son del tipo: ``fichas_id['a']=(repeticion, valor)`` donde
 
    (Mario R Eraso, GFDL, https://commons.wikimedia.org/w/index.php?curid=5670302)
 
-.. important:: En los archivos `palabras.words.gz <data/palabras.words.gz>`_ y `palabras.words_en.gz <data/palabras.words_en.gz>`_ hay listas de palabras en castellano e inglés, respectivamente.
+.. important:: En los archivos `palabras.words.gz <data/palabras.words.gz>`_ y `palabras_en.words.gz <data/palabras_en.words.gz>`_ hay listas de palabras en castellano e inglés, respectivamente.
 
 
 Se pide que:
