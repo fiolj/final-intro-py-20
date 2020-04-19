@@ -168,7 +168,7 @@ Ejemplo de implementación (python corresponde a python3):
 
 .. code:: bash
 
-   $ python criptoanalisis.py mensaje_cifrado_01.txt --idiomas español inglés alemán francés italiano finlandés
+   $ python criptoanalisis.py mensaje_cifrado_01.txt --idiomas español inglés alemán finlandés
    ...
 
    $ python3 criptoanalisis.py mensaje_cifrado_01.txt -i español
