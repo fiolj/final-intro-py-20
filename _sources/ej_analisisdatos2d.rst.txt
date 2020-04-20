@@ -43,7 +43,7 @@ Se pide que realice un programa que:
    a. Identifique el centro :math:`(x_{0},y_{0})` de la distribución en
       el plano :math:`x-y`.
    b. Calcule el eje principal de la distribución, que definimos como la
-      recta a la cuál la suma de las distancias de todos los puntos es
+      recta a la cuál la suma del cuadrado de las distancias de todos los puntos es
       mínima.
    c. Obtenga el valor del ángulo :math:`\theta` del eje respecto al eje
       horizontal.
