@@ -1,6 +1,9 @@
-###########################
- Preguntas muy preguntadas
-###########################
+#################################
+|icono| Preguntas muy preguntadas
+#################################
+
+.. |icono| image:: _static/question-circle.svg
+	   :width: 52
 
 En esta sección se aclararán dudas que surjan recurrentemente respecto al examen final
 

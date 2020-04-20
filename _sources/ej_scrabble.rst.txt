@@ -1,5 +1,8 @@
-Scrabble
-========
+|icono| Scrabble
+================
+
+.. |icono| image:: _static/language.svg
+	   :width: 52
 
 En este ejercicio, se pide crear un programa que resuelva el problema de
 Scrabble en un dado idioma (sólo tenemos listas de palabras en español e

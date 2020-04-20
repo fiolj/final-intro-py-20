@@ -1,9 +1,11 @@
 .. Examen Final IPyIC documentation master file
    It should contain at least the root `toctree` directive.
 
-#######################
-Examen Final IPyIC 2020
-#######################
+################################
+|examen| Examen Final IPyIC 2020
+################################
+.. |examen| image:: _static/user-graduate.svg
+	    :width: 52
 
 :Institución: Instituto Balseiro - Univ. Nac. de Cuyo
 :Fecha: Febrero a abril de |today|

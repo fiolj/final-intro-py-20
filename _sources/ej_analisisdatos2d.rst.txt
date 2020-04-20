@@ -1,5 +1,8 @@
-Análisis de datos
-=================
+|icono| Análisis de datos
+=========================
+
+.. |icono| image:: _static/chart-line.svg
+	   :width: 52
 
 En el archivo `medicion3D.dat.gz <data/medicion3D.dat.gz>`_ se encuentra el resultado de muchos
 días de medición de datos que corresponden a puntos en el espacio

@@ -1,11 +1,10 @@
-##############################################
-Decaímiento espontáneo de estados metaestables
-##############################################
+|icono| Decaímiento espontáneo de estados metaestables
+======================================================
+.. |icono| image:: _static/atom.svg
+	   :width: 52
 
-
-***********************
 Definición del problema
-***********************
+-----------------------
 
 Cuando una partícula (núcleo, átomo, o molécula) se encuentra en un estado que no es estable, puede decaer espontánemente. Por ejemplo, algunos núcleos decaen a otros emitiendo radiación $\alpha$, $\beta$ o $\gamma$. Otro ejemplo es el de átomos, que pueden decaer a un estado más estable emitiendo luz o electrones.
 
@@ -31,12 +30,11 @@ o, equivalentemente para el el cambio en el número de partículas por unidad de
 Este ejercicio propone estudiar mediante simulaciones la evolución en el tiempo del número $N(t)$ de partículas en una caja que decaen espontáneamente. 
 Para ello se pide:
 
-*********
 Enunciado
-*********
+---------
 
 Etapa 1
-=======
+^^^^^^^
 
 #. Escribir un programa que simule el decaimiento espontáneo de $N$ partículas en una caja y permita obtener el número de partículas como función del tiempo.
   
@@ -61,7 +59,7 @@ Etapa 1
 
 
 Etapa 2
-=======
+^^^^^^^
 
 Ahora modificamos levemente la física del problema. Considere que cuando cada partícula decae emite un electrón con una energía media igual a 10 eV. que se mide con un detector que se encuentra a una distancia de 1 m. La energía del electrón emitido tiene una distribución Gaussiana con ancho $\sigma$ igual al 10% de su energía media.
 

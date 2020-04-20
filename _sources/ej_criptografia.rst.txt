@@ -1,5 +1,8 @@
-Análisis criptográfico de texto
-===============================
+|icono| Análisis criptográfico de texto
+=======================================
+
+.. |icono| image:: _static/user-secret.svg
+	   :width: 52
 
 Se tiene una serie de mensajes cifrados los cuales se quieren descifrar.
 Gracias a nuestro servicio de inteligencia sabemos que la técnica de

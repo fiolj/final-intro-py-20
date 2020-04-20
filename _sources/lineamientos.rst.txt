@@ -1,6 +1,9 @@
-####################
-Modalidad del examen
-####################
+############################
+|icono| Modalidad del examen
+############################
+
+.. |icono| image:: _static/list-alt.svg
+	   :width: 52
 
 La modalidad del examen es '*domiciliario*'.
 Cada estudiante debe elegir un problema, resolverlo y enviar su resolución por correo electrónico. La entrega consiste únicamente de uno o más archivos de programa, sin datos o figuras.
