@@ -47,6 +47,10 @@ Scrabble
 
   En este problema no se considera el tablero, sólo se toman, o elijen al azar siete letras del conjunto de fichas dadas y se busca las palabras posibles que se pueden formar con estas letras.
 
+- ¿Qué son las fichas marcadas como "blank"?
+
+  Las fichas en blanco corresponden a comodines y pueden reemplazar a cualquier letra. El programa debería buscar todas las palabras posibles para todos los valores posibles de dicha ficha.
+
 
 *****************
 Análisis de datos
